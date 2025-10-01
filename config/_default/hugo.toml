@@ -1,0 +1,86 @@
+
+
+metaDataFormat = "yaml"
+theme = "blist"
+title = "SITUS RESMI DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN PROVINSI KALIMANTAN BARAT"
+defaultContentLanguage = "id"
+defaultContentLanguageInSubdir = false
+contentDir = "content" #English
+timeout = "10m"
+
+[params]
+domain = "perkim.kalbarprov.go.id"
+phone = "08115656122"
+email = "disperkim@kalbarprov.go.id"
+address = "Jalan Adisucipto No. 50 Pontianak, Kalimantan Barat"
+copyright = "Copyright © 2024"
+analytics = "<!-- Google tag (gtag.js) --><script async src='https://www.googletagmanager.com/gtag/js?id=G-743691DT5Y'></script><script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-743691DT5Y');</script>"
+darkModeToggle = true
+ascentColor = "bg-defaultColor"
+frontBundle = "link-terkait"
+frontBundle2 = "berita"
+hideMeta = false
+hideOtherLanguages = false
+introTitle = "DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN PROVINSI KALIMANTAN BARAT"
+introSubtitle = "WEBSITE RESMI DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN PROVINSI KALIMANTAN BARAT"
+
+[languages]
+
+[languages.id]
+languageName = "Bahasa Indonesia"
+weight = 1
+
+[languages.id.params]
+language-code = "id-ID"
+languageDirection = "ltr"
+introTitle = "DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN PROVINSI KALIMANTAN BARAT"
+introSubtitle = "WEBSITE RESMI DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN PROVINSI KALIMANTAN BARAT"
+#Social Media links
+
+[[params.homepage.social.icons]]
+website = "youtube"
+url = "https://www.youtube.com/@disperkimprovkalbar"
+
+[[params.homepage.social.icons]]
+website = "youtubeEmbed"
+url = "https://youtube.com/@disperkimprovkalbar?si=3k2uFLF5ZgycS55s"
+
+[[params.homepage.social.icons]]
+website = "instagram"
+url = "https://www.instagram.com/disperkim.kalbar/"
+
+[[params.homepage.social.icons]]
+website = "facebook"
+url = "https://web.facebook.com/dinas.barat.716"
+
+[[params.homepage.social.icons]]
+website = "whatsapp"
+url = "08115656122"
+
+[[params.homepage.social.icons]]
+website = "gmapsEmbed"
+url = "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8161748865823!2d109.3645782!3d-0.059418399999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e1d59efa7372d53%3A0xd0f7ca99f8c6b23c!2sDinas%20Perumahan%20Rakyat%20dan%20Kawasan%20Permukiman!5e0!3m2!1sid!2sid!4v1754447582899!5m2!1sid!2sid\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+
+[markup]
+
+[markup.highlight]
+style = "dracula"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+
+
+[[params.running_text]]
+text = "Selamat Datang Di Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi Kalimantan Barat"
+
+
+
+[[params.sliders.images]]
+url = "image (1).png"
+extension = "png"
+
+
+[[params.sliders.images]]
+url = "image (2).png"
+extension = "png"

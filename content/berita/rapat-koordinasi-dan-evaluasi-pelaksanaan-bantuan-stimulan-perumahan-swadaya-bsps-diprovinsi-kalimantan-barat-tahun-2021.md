@@ -1,0 +1,12 @@
+---
+author: disperkim
+title: "Rapat Koordinasi Dan Evaluasi Pelaksanaan Bantuan Stimulan Perumahan Swadaya (Bsps) Diprovinsi Kalimantan Barat Tahun 2021"
+date: 1631664000
+
+thumbnail: "/berita/thumbnails/compressed_a8jEaRatZHArRABTkHY6OMXQtDSIlE8VwKfYIYuo.jpg"
+url: /berita/rapat-koordinasi-dan-evaluasi-pelaksanaan-bantuan-stimulan-perumahan-swadaya-bsps-diprovinsi-kalimantan-barat-tahun-2021
+---
+
+<p style="box-sizing: border-box; margin: 0px 0px 20px; color: #777777; line-height: 26px; font-family: Poppins, Arial, sans-serif; font-size: 14px; background-color: #ffffff;"><span style="box-sizing: border-box; font-size: 12pt;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><img src="/images/kVuvbhYX3R47b2mKOCPY.jpeg" width="1145" height="644" alt="" /></span></span></p>
+<p style="box-sizing: border-box; margin: 0px 0px 20px; color: #777777; line-height: 26px; font-family: Poppins, Arial, sans-serif; font-size: 14px; background-color: #ffffff;"><span style="box-sizing: border-box; font-size: 12pt;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;">Rabu, 15 September 2021 Kepala Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi Kalimantan Barat memberikan sambutan dalam kegiatan Rapat Koordinasi dan Evaluasi Pelaksanaan Bantuan Stimulan Perumahan Swadaya (BSPS) di Provinsi Kalimantan Barat Tahun 2021 yang diselenggarakan oleh Kementerian PUPR melalui Direktorat Rumah Swadaya.</span></span></p>
+<p style="box-sizing: border-box; margin: 0px 0px 20px; color: #777777; line-height: 26px; font-family: Poppins, Arial, sans-serif; font-size: 14px; background-color: #ffffff;"><span style="box-sizing: border-box; font-size: 12pt;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;">Dalam Sambutanya Kepala Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi Kalimantan Barat menyampaikan apresiasi dan ucapan terimakasih atas Program BSPS yang memberi sumbangan besar dalam mengurangi Rumah Tidak Layak Huni (RTLH) di Provinsi Kalimantan Barat. Selain itu beliau juga berharap dengan dilaksanakannya kegiatan ini dapat meningkatkan strategi dalam penyusunan program dan kegiatan perumahan di Tahun Anggaran 2022, dan juga dapat menambah sinergitas, koordinasi dan aksi pada bidang perumahan dan Kawasan Permukiman sehingga output dan outcome-nya dapat maksimal bagi pelaksanaan pembangunan di Provinsi Kalimantan Barat.</span></span></p>

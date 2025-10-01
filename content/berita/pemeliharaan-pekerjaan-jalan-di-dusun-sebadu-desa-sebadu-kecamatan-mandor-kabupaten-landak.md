@@ -1,0 +1,8 @@
+---
+author: Emriliza Amarulhaq
+title: "Pemeliharaan Pekerjaan Jalan di Dusun Sebadu Desa Sebadu, Kecamatan Mandor, Kabupaten Landak"
+date: 2024-12-17
+url: "/berita/pemeliharaan-pekerjaan-jalan-di-dusun-sebadu-desa-sebadu-kecamatan-mandor-kabupaten-landak"
+thumbnail: "/berita/thumbnails/compressed_OMCZptU1jhMcxcQwoK29M73syUHkNz8ibdITRUiv.jpg"
+---
+<p><img src="/images/o8lzCDzJFGPs4qll9dfl.jpeg" alt="" width="1000" height="750"></p><p><img src="/images/YAhFwT5iuxDOU9mKocrE.jpeg" alt="" width="1000" height="750"></p><p><img src="/images/pbpXUoZj2kP5LH9G5W7W.jpeg" alt="" width="1000" height="750"></p><p><img src="/images/Vawh4Jh0ccWaTU1MlHgX.jpeg" alt="" width="1000" height="750"></p><p><img src="/images/V5x4f2gVmPkIeXFVYTjs.jpeg" alt="" width="1000" height="1333"></p><p style="text-align:justify;"><strong>Pemeliharaan Pekerjaan Jalan di Dusun Sebadu</strong><br><strong>Desa Sebadu, Kecamatan Mandor, Kabupaten Landak</strong></p><p style="text-align:justify;">Pada pekerjaan jalan di <strong>Dusun Sebadu, Desa Sebadu, Kecamatan Mandor, Kabupaten Landak</strong>, saat ini masih dalam <strong>masa pemeliharaan</strong>. Sehubungan dengan adanya laporan terkait kerusakan di beberapa ruas jalan, pihak <strong>pelaksana pekerjaan</strong> telah melakukan <strong>tindak lanjut</strong> dengan memperbaiki ruas-ruas jalan yang mengalami kerusakan.</p><p style="text-align:justify;">Perbaikan tersebut dilakukan sebagai bentuk tanggung jawab pelaksana dalam menjaga kualitas jalan selama masa pemeliharaan. Langkah ini diharapkan dapat memastikan jalan tetap dalam kondisi baik dan dapat digunakan oleh masyarakat dengan nyaman dan aman.</p>

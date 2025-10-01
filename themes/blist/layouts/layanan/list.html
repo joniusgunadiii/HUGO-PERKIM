@@ -1,0 +1,116 @@
+{{ define "main" }}
+
+<div class="container mx-auto px-4 py-8">
+  <!-- Header Section -->
+  <div class="text-center mb-12">
+    <h1 class="text-4xl font-bold text-black mb-2">Layanan</h1>
+    <p class="text-lg text-amber-700 dark:text-amber-400 mb-6">Informasi Layanan Dinas Perkim Kalbar</p>
+  </div>
+
+  {{ if gt (len .Pages) 0 }}
+  <!-- Gallery Grid: show one card per page -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+    {{ range .Pages.ByDate.Reverse }}
+      {{ $content := .Content }}
+      {{ $images := findRE `<img[^>]+src="([^"]+)"[^>]*>` $content }}
+      {{ $pageTitle := .Title }}
+      {{ $pageURL := .RelPermalink }}
+
+      {{ if $images }}
+        {{ $firstImage := index $images 0 }}
+        {{ $src := $firstImage | replaceRE `.*src="([^"]+)".*` "$1" }}
+        {{ $alt := $firstImage | replaceRE `.*alt="([^"]*)".*` "$1" }}
+
+        <!-- Page Card (one per page) -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group">
+          <div class="relative overflow-hidden">
+            <img 
+              src="{{ $src }}" 
+              alt="{{ $alt | default $pageTitle }}" 
+              class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 cursor-pointer"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center cursor-pointer"
+                 onclick="window.location.href='{{ $pageURL }}'">
+              <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white dark:bg-gray-800 rounded-full p-3 shadow-lg">
+                <svg class="w-6 h-6 text-gray-700 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-amber-600 dark:text-gray-100 text-sm leading-tight">
+              {{ $pageTitle }}
+            </h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+              {{ len $images }} gambar
+            </p>
+          </div>
+        </div>
+      {{ end }}
+    {{ end }}
+  </div>
+  {{ else }}
+  <!-- Fallback: render _index.md content if no pages -->
+  <div class="max-w-7xl mx-auto">
+    {{ .Content | safeHTML }}
+  </div>
+  {{ end }}
+</div>
+
+<!-- Full Screen Modal for viewing images -->
+<div id="layananModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-90 flex items-center justify-center p-4">
+  <div class="relative max-w-7xl max-h-full w-full h-full flex items-center justify-center">
+    <button onclick="closeLayananModal()" class="absolute top-4 right-4 text-white hover:text-amber-400 text-3xl font-bold z-10 bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center">
+      ✕
+    </button>
+    <img id="layananModalImage" src="" alt="" class="max-w-full max-h-full object-contain">
+    <p id="layananModalCaption" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-center text-lg bg-black bg-opacity-50 px-4 py-2 rounded"></p>
+  </div>
+</div>
+
+<script>
+function openLayananModal(src, title) {
+  console.log('Opening layanan modal with:', src, title); // Debug log
+  const modal = document.getElementById('layananModal');
+  const modalImage = document.getElementById('layananModalImage');
+  const modalCaption = document.getElementById('layananModalCaption');
+  
+  if (modal && modalImage && modalCaption) {
+    modalImage.src = src;
+    modalImage.alt = title || '';
+    modalCaption.textContent = title || '';
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    console.log('Layanan modal opened successfully'); // Debug log
+  } else {
+    console.error('Layanan modal elements not found'); // Debug log
+  }
+}
+
+function closeLayananModal() {
+  const modal = document.getElementById('layananModal');
+  if (modal) {
+    modal.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  }
+}
+
+// Click outside modal to close
+document.addEventListener('click', function(e) {
+  const modal = document.getElementById('layananModal');
+  if (e.target === modal) {
+    closeLayananModal();
+  }
+});
+
+// Escape key to close
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeLayananModal();
+  }
+});
+</script>
+
+{{ end }}

@@ -1,0 +1,279 @@
+[[main]]
+identifier = "berita"
+name = "Berita"
+parent = ""
+url = "/berita"
+weight = 1
+
+[[main]]
+identifier = "profil"
+name = "Profil"
+parent = ""
+url = "/profil"
+weight = 2
+
+[[main]]
+identifier = "layanan"
+name = "Layanan"
+parent = ""
+url = "/layanan"
+weight = 2
+
+[[main]]
+identifier = "faq"
+name = "FAQ"
+parent = ""
+url = "/faq/faq"
+weight = 2
+
+[[main]]
+identifier = "skm"
+name = "SKM"
+parent = ""
+url = "/skm"
+weight = 3
+
+[[main]]
+identifier = "ppid"
+name = "PPID"
+parent = ""
+url = "/ppid"
+weight = 3
+
+[[main]]
+identifier = "kegiatan"
+name = "Kegiatan"
+parent = ""
+url = "/kegiatan"
+weight = 6
+
+[[main]]
+identifier = "sop"
+name = "SOP"
+parent = ""
+url = "/sop"
+weight = 7
+
+[[main]]
+identifier = "informasi-keuangan"
+name = "Informasi Keuangan"
+parent = ""
+url = "/informasi-keuangan"
+weight = 8
+
+[[main]]
+identifier = "regulasi"
+name = "Regulasi"
+parent = ""
+url = "/ppid/regulasi"
+weight = 8.1
+
+[[main]]
+identifier = "kepala-dinas"
+name = "Kepala Dinas"
+parent = "profil"
+url = "/profil/kepala-dinas"
+weight = 1
+
+[[main]]
+identifier = "maklumat-pelayanan-informasi"
+name = "Maklumat Pelayanan Informasi"
+parent = "profil"
+url = "/profil/maklumat-pelayanan-informasi"
+weight = 2
+
+[[main]]
+identifier = "struktur-organisasi"
+name = "Struktur Organisasi"
+parent = "profil"
+url = "/profil/struktur-organisasi"
+weight = 3
+
+[[main]]
+identifier = "visi-dan-misi"
+name = "Visi dan Misi"
+parent = "profil"
+url = "/profil/visi-dan-misi"
+weight = 4
+
+[[main]]
+identifier = "tugas-dan-fungsi"
+name = "Tugas Dan Fungsi"
+parent = "profil"
+url = "/profil/tugas-dan-fungsi"
+weight = 5
+
+[[main]]
+identifier = "keterbukaan-informasi"
+name = "Keterbukaan Informasi"
+parent = "profil"
+url = "/profil/keterbukaan-informasi"
+weight = 6
+
+[[main]]
+identifier = "lhkpn"
+name = "LHKPN"
+parent = "profil"
+url = "/profil/lhkpn"
+weight = 7
+
+[[main]]
+identifier = "profil-ppid"
+name = "Profil PPID"
+parent = "ppid"
+url = "/ppid/profil-ppid"
+weight = 1
+
+[[main]]
+identifier = "galeri-foto"
+name = "Galeri Foto"
+parent = "ppid"
+url = "/ppid/galeri"
+weight = 2
+
+[[main]]
+identifier = "tata-cara"
+name = "Tata Cara"
+parent = "ppid"
+url = "/ppid/tata-cara"
+weight = 3
+
+[[main]]
+identifier = "formulir-ppid"
+name = "Formulir PPID"
+parent = "ppid"
+url = "/ppid/formulir-ppid"
+weight = 4
+
+[[main]]
+identifier = "test-formulir-ppid"
+name = "Test Formulir PPID"
+parent = "ppid"
+url = "/ppid/test-formulir-ppid"
+weight = 5
+
+[[main]]
+identifier = "tugas-dan-wewenang-ppid"
+name = "Tugas dan Wewenang PPID"
+parent = "ppid"
+url = "/ppid/tugas-dan-wewenang-ppid"
+weight = 6
+
+[[main]]
+identifier = "struktur-organisasi-ppid"
+name = "Struktur Organisasi PPID"
+parent = "ppid"
+url = "/ppid/struktur-organisasi-ppid"
+weight = 7
+
+[[main]]
+identifier = "sop-ppid"
+name = "SOP PPID"
+parent = "ppid"
+url = "/ppid/sop-ppid"
+weight = 8
+
+[[main]]
+identifier = "surat-keputusan-ppid"
+name = "Surat Keputusan PPID"
+parent = "ppid"
+url = "/ppid/surat-keputusan-ppid"
+weight = 9
+
+[[main]]
+identifier = "visi-misi-dan-wewenang-ppid"
+name = "Visi, Misi dan Wewenang PPID"
+parent = "ppid"
+url = "/ppid"
+weight = 10
+
+[[main]]
+identifier = "2021"
+name = "2021"
+parent = "kegiatan"
+url = "/2021"
+weight = 2
+
+[[main]]
+identifier = "2022"
+name = "2022"
+parent = "kegiatan"
+url = "/2022"
+weight = 3
+
+[[main]]
+identifier = "2023"
+name = "2023"
+parent = "kegiatan"
+url = "/2023"
+weight = 3
+
+[[main]]
+identifier = "2024"
+name = "2024"
+parent = "kegiatan"
+url = "/2024"
+weight = 4
+
+[[main]]
+identifier = "2025"
+name = "2025"
+parent = "kegiatan"
+url = "/2025"
+weight = 5
+
+[[main]]
+identifier = "sop-kegiatan"
+name = "SOP Kegiatan"
+parent = "kegiatan"
+url = "/kegiatan"
+weight = 5
+
+[[main]]
+identifier = "sk-sop"
+name = "SK SOP"
+parent = "sop"
+url = "/sop/sk-sop"
+weight = 1
+
+[[main]]
+identifier = "sop-bidang-kawasan-permukiman"
+name = "SOP Bidang Kawasan Permukiman"
+parent = "sop"
+url = "/sop/sop-bidang-kawasan-permukiman"
+weight = 2
+
+[[main]]
+identifier = "sop-bidang-pertanahan"
+name = "SOP Bidang Pertanahan"
+parent = "sop"
+url = "/sop/sop-bidang-pertanahan"
+weight = 3
+
+[[main]]
+identifier = "sop-subbag-umum-aparatur-dan-aset"
+name = "SOP Subbag Umum, Aparatur dan Aset"
+parent = "sop"
+url = "/sop/sop-subbag-umum-aparatur-dan-aset"
+weight = 4
+
+[[main]]
+identifier = "subbag-renja-monev-dan-keuangan"
+name = "Subbag Renja, Monev dan Keuangan"
+parent = "sop"
+url = "/sop/subbag-renja-monev-dan-keuangan"
+weight = 5
+
+[[main]]
+identifier = "2023"
+name = "2023"
+parent = "informasi-keuangan"
+url = "/informasi-keuangan/informasi-keuangan-2023"
+weight = 1
+
+[[main]]
+identifier = "2024"
+name = "2024"
+parent = "informasi-keuangan"
+url = "/informasi-keuangan/informasi-keuangan-2024"
+weight = 2

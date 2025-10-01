@@ -1,0 +1,106 @@
+{{ define "main" }}
+
+<div class="container mx-auto px-4 py-8">
+  <!-- Header Section -->
+  <div class="text-center mb-12">
+    <h1 class="text-4xl font-bold text-black mb-2">Layanan</h1>
+    <p class="text-lg text-amber-700 dark:text-amber-400 mb-6">Informasi Layanan Dinas Perkim Kalbar</p>
+  </div>
+
+  {{ if gt (len .Pages) 0 }}
+  <!-- Gallery Grid: show images directly from child pages -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+    {{ range .Pages.ByDate.Reverse }}
+      {{ $content := .Content }}
+      {{ $images := findRE `<img[^>]+src="([^"]+)"[^>]*>` $content }}
+      {{ $pageTitle := .Title }}
+
+      {{ if $images }}
+        {{ range $image := $images }}
+          {{ $src := $image | replaceRE `.*src="([^"]+)".*` "$1" }}
+          {{ $alt := $image | replaceRE `.*alt="([^"]*)".*` "$1" }}
+
+          <!-- Individual Image Card -->
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group">
+            <div class="relative overflow-hidden">
+              <img 
+                src="{{ $src }}" 
+                alt="{{ $alt | default $pageTitle }}" 
+                class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 cursor-pointer layanan-img"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                <button class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white dark:bg-gray-800 rounded-full p-3 shadow-lg layanan-eye"
+                        data-src="{{ $src }}" data-title="{{ $pageTitle }}">
+                  <svg class="w-6 h-6 text-gray-700 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-amber-600 dark:text-gray-100 text-sm leading-tight">
+                {{ $pageTitle }}
+              </h3>
+            </div>
+          </div>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </div>
+  {{ else }}
+  <!-- Fallback: render _index.md content if no pages -->
+  <div class="max-w-7xl mx-auto">
+    {{ .Content | safeHTML }}
+  </div>
+  {{ end }}
+</div>
+
+<!-- Simple Modal for viewing images -->
+<div id="layananModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-75 flex items-center justify-center p-4">
+  <div class="relative max-w-4xl max-h-full">
+    <button id="layananModalClose" class="absolute -top-10 right-0 text-white hover:text-amber-400 text-2xl font-bold z-10">✕</button>
+    <img id="layananModalImage" src="" alt="" class="max-w-full max-h-full object-contain rounded-lg">
+    <p id="layananModalCaption" class="text-white text-center mt-4 text-lg"></p>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('layananModal');
+    const modalImg = document.getElementById('layananModalImage');
+    const modalCap = document.getElementById('layananModalCaption');
+    const closeBtn = document.getElementById('layananModalClose');
+
+    function openModal(src, title) {
+      modalImg.src = src;
+      modalCap.textContent = title || '';
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      modal.classList.add('hidden');
+      modalImg.src = '';
+      modalCap.textContent = '';
+      document.body.style.overflow = 'auto';
+    }
+
+    document.querySelectorAll('.layanan-eye, .layanan-img').forEach(el => {
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const src = el.getAttribute('data-src') || el.getAttribute('src');
+        const title = el.getAttribute('data-title') || '';
+        openModal(src, title);
+      });
+    });
+
+    // Close handlers
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+  });
+</script>
+
+{{ end }}

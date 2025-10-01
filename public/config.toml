@@ -1,0 +1,59 @@
+[global]
+baseurl = ""
+metaDataFormat = "yaml"
+title = "SITUS RESMI DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN PROVINSI KALIMANTAN BARAT"
+theme = "blist"
+DefaultContentLanguage = "id"
+DefaultContentLanguageInSubdir = false
+contentDir = "content" #English"
+weight = 1
+languageName = "Indonesia"
+[languages.id.params]
+introTitle = "DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN PROVINSI KALIMANTAN BARAT"
+introSubtitle = "WEBSITE RESMI DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN PROVINSI KALIMANTAN BARAT"
+introPhoto = "/picture.jpg"
+logo = "/logo.png"
+name = "Top Post"
+url = "/en/blog/emoji-support/"
+weight = 4
+[params]
+phone = "08115656122"
+address = "Jalan Adisucipto No. 50 Pontianak, Kalimantan Barat"
+email = "disperkim@kalbarprov.go.id"
+darkModeToggle = true
+enableSearch = true
+searchKeys = "["
+copyright = "Copyright © 2024"
+favicon = "/favicon.svg"
+ascentColor = "bg-yellow-500"
+frontBundle = "Berita"
+frontBundle2 = "galeri-foto"
+frontBundle3 = "KEGIATAN"
+hideMeta = false
+hideOtherLanguages = false
+toc = true
+hidePageThumbnail = false
+introTitle = "Dinas Komunikasi dan Informatika"
+introSubtitle = "Website resmi Dinas Komunikasi dan Informatika provinsi Kalimantan Barat"
+[params.comments]
+system = "giscus"
+repo = ""
+repoid = ""
+category = ""
+categoryid = ""
+mapping = ""
+strict = ""
+reactionsenabled = ""
+emitmetadata = ""
+inputposition = ""
+theme = ""
+[params.homepage.social]
+title = "Follow me"
+description = "I work on everything coding and tweet developer memes"
+[build]
+writeStats = true
+[markup]
+[markup.highlight]
+style = "dracula"
+[markup.goldmark.renderer]
+unsafe = true

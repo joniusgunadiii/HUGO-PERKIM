@@ -1,0 +1,590 @@
+{{ define "main" }}
+
+<!-- Running Text -->
+{{ $runningText := .Site.Params.running_text }} {{ if $runningText }}
+<div
+  class="w-full max-w-full p-4 bg-white border border-gray-300 rounded shadow"
+>
+  <div class="marquee">
+    <div class="marquee-text">
+      <p class="text-lg font-semibold text-black" style="font-size: 0.9rem">
+        {{ range $runningText }}{{ .text }}&nbsp;&nbsp;&nbsp;&nbsp;{{ end }}
+      </p>
+    </div>
+  </div>
+</div>
+{{ end }}
+
+<style>
+  .marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+  .marquee-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 20s linear infinite;
+  }
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* Slider sizing: make images less tall and more elegant */
+  .mySwiper {
+    height: 48vh; /* Base height */
+    max-height: 480px; /* Cap on large screens */
+    min-height: 220px; /* Ensure visibility on small screens */
+  }
+  @media (min-width: 1024px) {
+    .mySwiper {
+      height: 55vh;
+      max-height: 520px;
+    }
+  }
+  @media (max-width: 640px) {
+    .mySwiper {
+      height: 32vh;
+      max-height: 260px;
+    }
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .zoom-in {
+    transition: transform 0.3s ease;
+  }
+  .zoom-in:hover {
+    transform: scale(1.1);
+  }
+</style>
+
+<!-- Hero Section with Slider -->
+{{ $sliderImages := .Site.Params.sliders.images }} {{ if len $sliderImages }}
+<div class="relative">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      {{ range $sliderImages }}
+      <div class="swiper-slide relative">
+        <img src="sliders/{{ .url }}" alt="Slider Image" class="w-full" />
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-transparent"
+        ></div>
+      </div>
+      {{ end }}
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <!-- Hero Content Overlay -->
+  <div class="absolute inset-0 flex items-center">
+    <div class="container mx-auto px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <h1
+          class="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight"
+        >
+          Selamat Datang di<br />
+          <span class="text-yellow-400">Dinas Perkim</span><br />
+          Provinsi Kalbar
+        </h1>
+        <p class="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
+          Melayani masyarakat dalam bidang perumahan rakyat dan kawasan
+          permukiman untuk Kalimantan Barat yang lebih baik.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="/layanan"
+            class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
+          >
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path>
+            </svg>
+            Layanan Kami
+          </a>
+          <a
+            href="/profil"
+            class="inline-flex items-center px-6 py-3 bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold rounded-lg transition-colors"
+          >
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path>
+            </svg>
+            Tentang Kami
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: { delay: 2500, disableOnInteraction: false },
+      pagination: { el: ".swiper-pagination", clickable: true },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  });
+</script>
+
+<!-- Welcome Section -->
+<div class="bg-gradient-to-r from-green-900 via-green-800 to-green-900 dark:bg-gradient-to-r dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16 relative overflow-hidden">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-green-600 dark:via-green-700 to-transparent"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Welcome Text -->
+      <div class="text-white dark:text-gray-100 space-y-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-green-400 dark:text-green-300 mb-6">
+          SELAMAT DATANG
+        </h2>
+
+        <div class="space-y-4 text-sm md:text-base leading-relaxed">
+          <p>
+            Selamat Datang di Website Resmi Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi Kalimantan Barat! Puji syukur kita panjatkan ke hadirat Tuhan Yang Maha Esa, atas rahmat dan karunia-Nya sehingga portal resmi ini dapat hadir sebagai sarana informasi dan komunikasi bagi masyarakat Kalimantan Barat.
+          </p>
+
+          <p>
+            Kami hadir untuk memberikan informasi seputar program, kegiatan, serta layanan di bidang perumahan dan permukiman. Harapan kami, website ini bisa jadi tempat berbagi pengetahuan, inspirasi, dan solusi bagi masyarakat yang ingin mewujudkan hunian layak serta lingkungan yang nyaman.
+          </p>
+        </div>
+
+        <div class="mt-8">
+          <p class="text-green-400 dark:text-green-300 font-semibold text-lg">
+            Salam Hangat,
+          </p>
+          <div class="mt-2">
+            <p class="text-green-400 dark:text-green-300 font-bold text-lg">
+              Yosafat Triadhi Andjioe, ST., MM., MT
+            </p>
+            <p class="text-green-300 dark:text-green-200 text-sm">
+              KEPALA DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN PROVINSI KALIMANTAN BARAT
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Welcome Image -->
+      <div class="flex justify-center lg:justify-end">
+        <div class="relative">
+          <!-- Photo Frame -->
+          <div class="bg-white dark:bg-gray-800 p-1 rounded-lg shadow-2xl">
+            <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
+              <!-- Official photo of the department head -->
+              <div class="w-80 h-96 rounded-lg overflow-hidden">
+                <img
+                  src="https://perkim.kalbarprov.go.id/images/dVO0Lmok6NuSy8KdyX6h.jpeg"
+                  alt="Yosafat Triadhi Andjioe, ST., MM., MT - Kepala Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi Kalimantan Barat"
+                  class="w-full h-full object-cover object-center"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Decorative Elements -->
+          <div class="absolute -top-4 -right-4 w-8 h-8 bg-green-400 dark:bg-green-300 rounded-full opacity-80"></div>
+          <div class="absolute -bottom-6 -left-6 w-12 h-12 bg-blue-300 dark:bg-gray-500 rounded-full opacity-60"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Berita Section -->
+<div class="bg-gray-200 dark:bg-gray-700 py-10">
+  <h2
+    class="mb-8 text-2xl font-bold text-center text-gray-800 dark:text-gray-100"
+  >
+    Berita
+  </h2>
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-5 max-w-6xl mx-auto"
+  >
+    {{ range first 8 (where .Site.RegularPages.ByDate.Reverse "Section"
+    "berita") }}
+    <div
+      class="rounded-lg shadow-md bg-white dark:bg-gray-800 overflow-hidden hover:shadow-lg transition"
+    >
+      <a href="{{ .RelPermalink }}">
+        {{ with .Params.thumbnail }}
+        <img
+          src="{{ . }}"
+          alt="{{ $.Title }}"
+          class="w-full h-52 object-cover"
+        />
+        {{ end }}
+        <div class="p-4">
+          <div class="text-sm text-gray-500 mb-1">
+            {{ .Date.Format "02 Jan 2006" }}
+          </div>
+          <h3
+            class="font-semibold text-gray-800 dark:text-gray-100 text-sm line-clamp-3"
+          >
+            {{ .Title }}
+          </h3>
+        </div>
+      </a>
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+<!-- Link Terkait Section -->
+<div class="bg-white dark:bg-gray-900 py-10">
+  <div class="max-w-6xl mx-auto px-5">
+    <h2
+      class="mb-8 text-2xl font-bold text-center text-gray-800 dark:text-gray-100"
+    >
+      Link Terkait
+    </h2>
+    <div
+      class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center"
+    >
+      <!-- SIKEDIP -->
+      <div class="flex flex-col items-center text-center">
+        <a
+          href="https://sikedip.kalbarprov.go.id/depan"
+          target="_blank"
+          rel="noopener"
+          class="group"
+        >
+          <div
+            class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 group-hover:scale-105 mb-3 min-h-[96px] flex items-center justify-center"
+          >
+            <img
+              src="/images/20250806hWcqz6FeXJklZz1O.png"
+              alt="SIKEDIP"
+              class="h-16 w-16 object-contain mx-auto"
+            />
+          </div>
+          <h3 class="font-semibold text-gray-800 dark:text-gray-100 text-sm">
+            SIKEDIP
+          </h3>
+        </a>
+      </div>
+
+      <!-- SPAN LAPOR -->
+      <div class="flex flex-col items-center text-center">
+        <a
+          href="https://www.lapor.go.id/"
+          target="_blank"
+          rel="noopener"
+          class="group"
+        >
+          <div
+            class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 group-hover:scale-105 mb-3 min-h-[96px] flex items-center justify-center"
+          >
+            <img
+              src="/images/20250806ofjfOxLbQs7KbHdS.jfif"
+              alt="SPAN LAPOR"
+              class="h-16 w-16 object-contain mx-auto"
+            />
+          </div>
+          <h3 class="font-semibold text-gray-800 dark:text-gray-100 text-sm">
+            SPAN LAPOR
+          </h3>
+        </a>
+      </div>
+
+      <!-- EDALPRO PERKIM -->
+      <div class="flex flex-col items-center text-center">
+        <a
+          href="https://e-dalproperkim.id/"
+          target="_blank"
+          rel="noopener"
+          class="group"
+        >
+          <div
+            class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 group-hover:scale-105 mb-3 min-h-[96px] flex items-center justify-center"
+          >
+            <img
+              src="/images/20250806o4yshCGKTAM26bvq.png"
+              alt="EDALPRO PERKIM"
+              class="h-16 w-16 object-contain mx-auto"
+            />
+          </div>
+          <h3 class="font-semibold text-gray-800 dark:text-gray-100 text-sm">
+            EDALPRO PERKIM
+          </h3>
+        </a>
+      </div>
+
+      <!-- SINDAH KALBAR -->
+      <div class="flex flex-col items-center text-center">
+        <a
+          href="https://siindah.kalbarprov.go.id/"
+          target="_blank"
+          rel="noopener"
+          class="group"
+        >
+          <div
+            class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 group-hover:scale-105 mb-3 min-h-[96px] flex items-center justify-center"
+          >
+            <img
+              src="/images/20250806lSr9qFeqYiZgtNNH.png"
+              alt="SINDAH KALBAR"
+              class="h-16 w-16 object-contain mx-auto"
+            />
+          </div>
+          <h3 class="font-semibold text-gray-800 dark:text-gray-100 text-sm">
+            SINDAH KALBAR
+          </h3>
+        </a>
+      </div>
+
+      <!-- SIPPN -->
+      <div class="flex flex-col items-center text-center">
+        <a
+          href="https://sippn.menpan.go.id/"
+          target="_blank"
+          rel="noopener"
+          class="group"
+        >
+          <div
+            class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 group-hover:scale-105 mb-3 min-h-[96px] flex items-center justify-center"
+          >
+            <img
+              src="https://www.ditjenpas.go.id/uploads/images/image_750x415_64689bf1bb68e.jpg"
+              alt="SIPPN"
+              class="h-16 w-16 object-contain mx-auto"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="font-semibold text-gray-800 dark:text-gray-100 text-sm">
+            SIPPN
+          </h3>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Statistik Pengunjung Section -->
+<div
+  class="bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 py-20"
+>
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">
+        Statistik Pengunjung
+      </h2>
+      <p class="text-lg text-gray-600 dark:text-gray-300">
+        Data kunjungan website Dinas Perkim Kalbar
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <!-- Hari ini Card -->
+      <div
+        class="group bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl p-8 text-center border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:-translate-y-2"
+      >
+        <div
+          class="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4"
+        >
+          <svg
+            class="w-8 h-8 text-yellow-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+            ></path>
+          </svg>
+        </div>
+        <h3
+          class="text-gray-500 dark:text-gray-400 text-sm font-semibold mb-2 uppercase tracking-wide"
+        >
+          Hari ini
+        </h3>
+        <div
+          id="visitor-today"
+          class="text-4xl font-bold text-gray-800 dark:text-white mb-2"
+        >
+          0
+        </div>
+        <div class="text-xs text-gray-400">Pengunjung</div>
+      </div>
+
+      <!-- Bulan ini Card -->
+      <div
+        class="group bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl p-8 text-center border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:-translate-y-2"
+      >
+        <div
+          class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4"
+        >
+          <svg
+            class="w-8 h-8 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+            ></path>
+          </svg>
+        </div>
+        <h3
+          class="text-gray-500 dark:text-gray-400 text-sm font-semibold mb-2 uppercase tracking-wide"
+        >
+          Bulan ini
+        </h3>
+        <div
+          id="visitor-month"
+          class="text-4xl font-bold text-gray-800 dark:text-white mb-2"
+        >
+          0
+        </div>
+        <div class="text-xs text-gray-400">Pengunjung</div>
+      </div>
+
+      <!-- Tahun ini Card -->
+      <div
+        class="group bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl p-8 text-center border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:-translate-y-2"
+      >
+        <div
+          class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4"
+        >
+          <svg
+            class="w-8 h-8 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+            ></path>
+          </svg>
+        </div>
+        <h3
+          class="text-gray-500 dark:text-gray-400 text-sm font-semibold mb-2 uppercase tracking-wide"
+        >
+          Tahun ini
+        </h3>
+        <div
+          id="visitor-year"
+          class="text-4xl font-bold text-gray-800 dark:text-white mb-2"
+        >
+          0
+        </div>
+        <div class="text-xs text-gray-400">Pengunjung</div>
+      </div>
+
+      <!-- Total Card -->
+      <div
+        class="group bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl p-8 text-center border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:-translate-y-2"
+      >
+        <div
+          class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"
+        >
+          <svg
+            class="w-8 h-8 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+            ></path>
+          </svg>
+        </div>
+        <h3
+          class="text-gray-500 dark:text-gray-400 text-sm font-semibold mb-2 uppercase tracking-wide"
+        >
+          Total
+        </h3>
+        <div
+          id="visitor-total"
+          class="text-4xl font-bold text-gray-800 dark:text-white mb-2"
+        >
+          0
+        </div>
+        <div class="text-xs text-gray-400">Pengunjung</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Agenda -->
+{{ $agenda := .Site.Params.agenda }} {{ if $agenda }}
+<div class="bg-white dark:bg-gray-900 py-10">
+  <h2
+    class="mb-8 text-2xl font-bold text-center text-gray-800 dark:text-gray-100"
+  >
+    Agenda
+  </h2>
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-5 max-w-6xl mx-auto"
+  >
+    {{ range first 6 $agenda }}
+    <div class="p-4 bg-white rounded-lg shadow-lg dark:bg-gray-800">
+      <h3 class="text-lg font-bold">{{ .hari }}</h3>
+      <p>{{ .lokasi }}</p>
+      <p>{{ .jamMulai }} - {{ .jamSelesai }}</p>
+      <p class="overflow-auto break-words">{{ .judul }}</p>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }} {{ end }}

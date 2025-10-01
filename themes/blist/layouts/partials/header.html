@@ -1,0 +1,646 @@
+<header class="sticky top-0 z-50 w-full">
+  <style>
+    /* Header styling inspired by Dinkes Kalbar */
+    header {
+      background: transparent;
+      box-shadow: none;
+      position: relative;
+      overflow: visible !important;
+      z-index: 1000 !important;
+    }
+
+    /* Top bar styling */
+    .top-bar {
+      background: linear-gradient(135deg, #065f46 0%, #047857 100%);
+      min-height: 60px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Main navigation bar styling */
+    .main-nav-bar {
+      background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+      min-height: 60px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Dark mode styling */
+    .dark .top-bar {
+      background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .dark .main-nav-bar {
+      background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Top bar logo and title styling */
+    .top-logo-section {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .top-logo-section img {
+      height: 45px;
+      width: auto;
+    }
+
+    .top-title-text {
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      line-height: 1.2;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .top-subtitle-text {
+      color: #d1fae5;
+      font-weight: 500;
+      font-size: 0.85rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Government logos styling */
+    .gov-logos {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .gov-logos img {
+      height: 40px;
+      width: auto;
+      transition: transform 0.3s ease;
+      background: white;
+      padding: 4px;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .gov-logos img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Navigation menu styling */
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    .nav-menu li {
+      position: relative;
+    }
+
+    .nav-menu li a {
+      display: block;
+      padding: 18px 16px;
+      color: white;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      transition: all 0.3s ease;
+      border-bottom: 3px solid transparent;
+      white-space: nowrap;
+    }
+
+    .nav-menu li a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-bottom-color: #fbbf24;
+      color: #fbbf24;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1200px) {
+      .nav-menu li a {
+        padding: 18px 12px;
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .nav-menu li a {
+        padding: 18px 10px;
+        font-size: 0.75rem;
+      }
+      
+      .top-title-text {
+        font-size: 1rem;
+      }
+      
+      .top-subtitle-text {
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .top-title-text {
+        font-size: 0.9rem;
+      }
+      
+      .top-subtitle-text {
+        font-size: 0.75rem;
+      }
+      
+      .top-logo-section img {
+        height: 35px;
+      }
+
+      .gov-logos {
+        gap: 8px;
+      }
+
+      .gov-logos img {
+        height: 30px;
+        padding: 3px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .gov-logos {
+        display: none;
+      }
+    }
+
+    ul.mobile-menu li a {
+      font-size: 0.85rem;
+      padding: 10px 16px;
+      color: white;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    ul.mobile-menu li a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fbbf24;
+      transform: translateY(-2px);
+    }
+
+    .nav-container {
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      margin: 6px;
+      transition: all 0.3s ease;
+    }
+
+    /* Dark mode navigation container */
+    .dark .nav-container {
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    ul.mobile-menu li .language-dropdown {
+      z-index: 9999 !important;
+      position: absolute !important;
+      top: 100% !important;
+      right: 0 !important;
+      min-width: 280px !important;
+      max-width: 350px !important;
+      width: max-content !important;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+      border: 1px solid rgba(255, 255, 255, 0.2) !important;
+      border-radius: 8px !important;
+      overflow: hidden !important;
+      transition: all 0.3s ease;
+    }
+
+    /* Dark mode dropdown */
+    .dark ul.mobile-menu li .language-dropdown {
+      background: rgba(17, 24, 39, 0.95) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    ul.mobile-menu li .language-dropdown a {
+      padding: 14px 20px;
+      color: white;
+      font-weight: 600;
+      border-radius: 0;
+      transition: all 0.3s ease;
+      display: block;
+      white-space: nowrap; /* prevent text wrapping */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.4;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      opacity: 0;
+      transform: translateX(-10px);
+      animation: slideInItem 0.3s ease-out forwards;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Stagger animation for dropdown items */
+    ul.mobile-menu li .language-dropdown a:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+    ul.mobile-menu li .language-dropdown a:nth-child(2) {
+      animation-delay: 0.15s;
+    }
+    ul.mobile-menu li .language-dropdown a:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+    ul.mobile-menu li .language-dropdown a:nth-child(4) {
+      animation-delay: 0.25s;
+    }
+    ul.mobile-menu li .language-dropdown a:nth-child(5) {
+      animation-delay: 0.3s;
+    }
+    ul.mobile-menu li .language-dropdown a:nth-child(6) {
+      animation-delay: 0.35s;
+    }
+
+    @keyframes slideInItem {
+      from {
+        opacity: 0;
+        transform: translateX(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    ul.mobile-menu li .language-dropdown a:last-child {
+      border-bottom: none;
+    }
+
+    ul.mobile-menu li .language-dropdown a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fbbf24;
+    }
+
+    /* Dropdown specific styling */
+    .language-switcher {
+      cursor: pointer;
+    }
+
+    /* Improved dropdown hover with smooth slide animation */
+    .dropdown-container {
+      position: relative;
+    }
+
+    /* Dropdown default state - hidden but positioned */
+    .language-dropdown {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      padding-top: 12px !important;
+      margin-top: 0 !important;
+      pointer-events: none;
+      overflow: visible !important;
+    }
+
+    /* Dropdown hover state - visible with animation */
+    .dropdown-container:hover .language-dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      display: flex !important;
+      pointer-events: auto;
+    }
+
+    /* Reset animation when dropdown is shown */
+    .dropdown-container:hover .language-dropdown a {
+      animation: slideInItem 0.3s ease-out forwards;
+    }
+
+    /* Hide animation when not hovering */
+    .dropdown-container:not(:hover) .language-dropdown a {
+      animation: none;
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+
+    /* Invisible hover bridge */
+    .language-dropdown::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 10px;
+      background: transparent;
+    }
+
+    /* Enhanced dropdown styling for better visual */
+    ul.mobile-menu li .language-dropdown {
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+      border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    }
+
+    /* Ensure dropdown is above other content */
+    .nav-container {
+      position: relative;
+      z-index: 1001;
+    }
+
+    ul.mobile-menu li {
+      position: relative;
+    }
+
+    /* Responsive dropdown positioning */
+    @media (max-width: 768px) {
+      ul.mobile-menu li .language-dropdown {
+        position: fixed !important;
+        top: 60px !important;
+        left: 10px !important;
+        right: 10px !important;
+        min-width: auto !important;
+        max-width: none !important;
+        width: calc(100vw - 20px) !important;
+      }
+
+      ul.mobile-menu li .language-dropdown a {
+        font-size: 0.9rem !important; /* a bit larger on mobile */
+        line-height: 1.35 !important;
+        padding: 16px 20px !important;
+        white-space: normal !important;
+      }
+    }
+
+    /* Desktop dropdown positioning */
+    @media (min-width: 769px) {
+      ul.mobile-menu li .language-dropdown {
+        right: -50px !important;
+        transform: translateX(0) !important;
+      }
+
+      /* Adjust for items near the right edge */
+      ul.mobile-menu li:nth-last-child(-n + 2) .language-dropdown {
+        right: 0 !important;
+        left: auto !important;
+      }
+    }
+  </style>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-full">
+        <!-- Left: Logo + Department Name -->
+        <a href='{{ absURL "/" }}' class="flex items-center py-2">
+          <div class="top-logo-section">
+            <img
+              src='{{ absURL "/images/logo-kalbar.svg" }}'
+              alt="Lambang Kalimantan Barat"
+              loading="lazy"
+            />
+            <img
+              src='{{ absURL "/images/logo-disperkim-kalbar.png" }}'
+              alt="Logo Disperkim Kalbar"
+              loading="lazy"
+            />
+            <div>
+              <div class="top-title-text">Dinas Perumahan Rakyat dan Kawasan Permukiman</div>
+              <div class="top-subtitle-text">Provinsi Kalimantan Barat</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Right: Government Logos -->
+        <div class="hidden sm:flex items-center">
+          <div class="gov-logos">
+            <!-- Logo BerAKHLAK -->
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Logo_BerAKHLAK.svg/640px-Logo_BerAKHLAK.svg.png"
+              alt="Logo BerAKHLAK"
+              title="BerAKHLAK - Berorientasi Pelayanan, Akuntabel, Kompeten, Harmonis, Loyal, Adaptif, Kolaboratif"
+              loading="lazy"
+            />
+            <!-- Logo Bangga Melayani Bangsa -->
+            <img
+              src="https://images.seeklogo.com/logo-png/61/2/bangga-melayani-bangsa-logo-png_seeklogo-612696.png"
+              alt="Logo Bangga Melayani Bangsa"
+              title="Bangga Melayani Bangsa"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button
+          id="mobile-menu-button"
+          class="md:hidden inline-flex items-center justify-center text-white hover:text-yellow-300 px-3"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <line x1="4" y1="8" x2="20" y2="8" />
+            <line x1="4" y1="16" x2="20" y2="16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <div class="main-nav-bar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        {{ $accent := .Site.Params.ascentColor }}
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex">
+          <ul class="nav-menu">
+            <li><a href='{{ absURL "/" }}'>Beranda</a></li>
+            {{ range .Site.Menus.main }} 
+            {{ $menuURL := .URL }} 
+            {{ $menuName := .Name }} 
+            {{ $menuHasChildren := .HasChildren }} 
+            {{ if $menuHasChildren }}
+            <li class="dropdown-container">
+              <span class="flex items-center gap-2 language-switcher">
+                <a>{{ $menuName }}</a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M18 15l-6 -6l-6 6h12"
+                    transform="rotate(180 12 12)"
+                  ></path>
+                </svg>
+              </span>
+              <div
+                class='language-dropdown w-screen md:w-80 absolute top-full flex-col {{ default "bg-defaultColor" $accent }} dark:bg-gray-900 z-10 hidden'
+                style="
+                  right: 0px;
+                  border-radius: 8px;
+                  border-color: rgba(255, 255, 255, 0.15);
+                  border-style: solid;
+                  border-width: 1px;
+                  min-width: 280px;
+                  max-width: 350px;
+                "
+              >
+                {{ range .Children }}
+                <a class="px-5 py-3 block text-white hover:bg-white hover:bg-opacity-10 transition-colors" href="{{ .URL }}">{{ .Name }}</a>
+                {{ end }}
+              </div>
+            </li>
+            {{ else }}
+            <li>
+              <a href="{{ $menuURL }}">{{ $menuName }}</a>
+            </li>
+            {{ end }} 
+            {{ end }}
+          </ul>
+        </nav>
+
+        <!-- Dark Mode Toggle -->
+        {{ if .Site.Params.darkModeToggle }}
+        <div class="hidden md:flex items-center">
+          <span class="inline-block cursor-pointer toggle-dark-mode text-white hover:text-yellow-300 transition-colors">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="12" r="3" />
+              <line x1="12" y1="5" x2="12" y2="5.01" />
+              <line x1="17" y1="7" x2="17" y2="7.01" />
+              <line x1="19" y1="12" x2="19" y2="12.01" />
+              <line x1="17" y1="17" x2="17" y2="17.01" />
+              <line x1="12" y1="19" x2="12" y2="19.01" />
+              <line x1="7" y1="17" x2="7" y2="17.01" />
+              <line x1="5" y1="12" x2="5" y2="12.01" />
+              <line x1="7" y1="7" x2="7" y2="7.01" />
+            </svg>
+          </span>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile dropdown menu -->
+  <div
+    id="mobile-menu"
+    class="md:hidden absolute z-20 w-full bg-emerald-800 dark:bg-gray-800 shadow-lg hidden"
+  >
+    <div class="px-4 py-2 space-y-1">
+      <a href='{{ absURL "/" }}' class="block px-3 py-2 text-white hover:bg-emerald-700 rounded">Beranda</a>
+      {{ range .Site.Menus.main }}
+      <a href="{{ .URL }}" class="block px-3 py-2 text-white hover:bg-emerald-700 rounded">{{ .Name }}</a>
+      {{ end }} 
+      {{ if .Site.Params.darkModeToggle }}
+      <span class="block px-3 py-2 text-white hover:bg-emerald-700 rounded cursor-pointer toggle-dark-mode">Toggle Dark Mode</span>
+      {{ end }}
+    </div>
+  </div>
+
+  <!-- Uncomment the sections below if needed -->
+  <!--
+  {{ if .Site.Params.enableSearch }}
+    <li class="grid place-items-center">
+      <span class="inline-block cursor-pointer open-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    {{ end }}
+  -->
+
+  <script>
+    $(document).ready(function () {
+      // active state on any menu list item
+      $(".mobile-menu li").on("click", function () {
+        $(".mobile-menu li").removeClass("active");
+        $(this).addClass("active");
+      });
+      // toggle mobile dropdown
+      $("#mobile-menu-button").on("click", function () {
+        $("#mobile-menu").toggleClass("hidden");
+      });
+
+      // Handle dropdown positioning
+      $(".language-switcher").on("mouseenter", function () {
+        var dropdown = $(this).siblings(".language-dropdown");
+        var windowWidth = $(window).width();
+        var dropdownOffset = $(this).offset();
+        var dropdownWidth = dropdown.outerWidth();
+
+        // Check if dropdown would go off-screen
+        if (dropdownOffset.left + dropdownWidth > windowWidth - 20) {
+          dropdown.css({
+            right: "0",
+            left: "auto",
+          });
+        } else {
+          dropdown.css({
+            left: "0",
+            right: "auto",
+          });
+        }
+      });
+    });
+  </script>
+</header>
+<style>
+  .marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .marquee-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 25s linear infinite;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+</style>

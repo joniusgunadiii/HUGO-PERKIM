@@ -1,0 +1,827 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[[languages.id.menu.main]]
+identifier = 'berita'
+name = "Berita"
+url = "/berita"
+weight = 1
+
+
+
+[[languages.id.menu.main]]
+identifier = 'profil'
+name = "Profil"
+url = "/profil"
+weight = 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[[languages.id.menu.main]]
+identifier = 'ppid'
+name = "PPID"
+url = "/ppid"
+weight = 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[[languages.id.menu.main]]
+identifier = 'kegiatan'
+name = "Kegiatan"
+url = "/kegiatan"
+weight = 6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[[languages.id.menu.main]]
+identifier = '2021'
+name = "2021"
+parent = "kegiatan"
+url = "/2021"
+weight = 2
+
+
+
+[[languages.id.menu.main]]
+identifier = '2022'
+name = "2022"
+parent = "kegiatan"
+url = "/2022"
+weight = 3
+
+
+
+
+
+
+
+[[languages.id.menu.main]]
+identifier = 'sop'
+name = "SOP"
+url = "/sop"
+weight = 7
+
+
+
+
+
+
+
+
+
+
+
+
+
+[[languages.id.menu.main]]
+identifier = 'informasi keuangan'
+name = "Informasi Keuangan"
+url = "/informasi keuangan"
+weight = 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[[languages.id.menu.main]]
+identifier = 'kepala dinas'
+name = "Kepala Dinas"
+parent = "profil"
+url = "/profil/kepala-dinas"
+weight = 1
+
+
+
+[[languages.id.menu.main]]
+identifier = 'maklumat pelayanan informasi'
+name = "Maklumat Pelayanan Informasi"
+parent = "profil"
+url = "/profil/maklumat-pelayanan-informasi"
+weight = 2
+
+
+
+[[languages.id.menu.main]]
+identifier = 'struktur organisasi'
+name = "Struktur Organisasi"
+parent = "profil"
+url = "/profil/struktur-organisasi"
+weight = 3
+
+
+
+[[languages.id.menu.main]]
+identifier = 'visi dan misi'
+name = "Visi dan Misi"
+parent = "profil"
+url = "/profil/visi-dan-misi"
+weight = 4
+
+
+
+[[languages.id.menu.main]]
+identifier = 'tugas dan fungsi'
+name = "Tugas Dan Fungsi"
+parent = "profil"
+url = "/profil/tugas-dan-fungsi"
+weight = 5
+
+
+
+[[languages.id.menu.main]]
+identifier = 'keterbukaan informasi'
+name = "Keterbukaan Informasi"
+parent = "profil"
+url = "/profil/keterbukaan-informasi"
+weight = 6
+
+
+
+[[languages.id.menu.main]]
+identifier = 'lhkpn'
+name = "LHKPN"
+parent = "profil"
+url = "/profil/lhkpn"
+weight = 7
+
+
+
+[[languages.id.menu.main]]
+identifier = 'profil ppid'
+name = "Profil PPID"
+parent = "ppid"
+url = "/ppid/profil-ppid"
+weight = 1
+
+
+
+
+
+
+
+[[languages.id.menu.main]]
+identifier = 'tata cara'
+name = "Tata Cara"
+parent = "ppid"
+url = "/ppid/tata-cara"
+weight = 3
+
+
+
+[[languages.id.menu.main]]
+identifier = 'formulir ppid'
+name = "Formulir PPID"
+parent = "ppid"
+url = "/ppid/formulir-ppid"
+weight = 4
+
+
+
+
+
+
+
+[[languages.id.menu.main]]
+identifier = 'struktur organisasi ppid'
+name = "Struktur Organisasi PPID"
+parent = "ppid"
+url = "/ppid/struktur-organisasi-ppid"
+weight = 7
+
+
+
+
+
+[[languages.id.menu.main]]
+identifier = 'surat keputusan ppid'
+name = "Surat Keputusan PPID"
+parent = "ppid"
+url = "/ppid/surat-keputusan-ppid"
+weight = 9
+
+
+
+[[languages.id.menu.main]]
+identifier = 'sop kegiatan'
+name = "SOP Kegiatan"
+parent = "kegiatan"
+url = "/sop-kegiatan/sop-kegiatan"
+weight = 1
+
+
+
+[[languages.id.menu.main]]
+identifier = 'sk sop'
+name = "SK SOP"
+parent = "sop"
+url = "/sop/sk-sop"
+weight = 1
+
+
+
+[[languages.id.menu.main]]
+identifier = 'sop bidang kawasan permukiman'
+name = "SOP Bidang Kawasan Permukiman"
+parent = "sop"
+url = "/sop/sop-bidang-kawasan-permukiman"
+weight = 2
+
+
+
+[[languages.id.menu.main]]
+identifier = 'sop bidang pertanahan'
+name = "SOP Bidang Pertanahan"
+parent = "sop"
+url = "/sop/sop-bidang-pertanahan"
+weight = 3
+
+
+
+[[languages.id.menu.main]]
+identifier = 'sop subbag umum, aparatur dan aset'
+name = "SOP Subbag Umum, Aparatur dan Aset"
+parent = "sop"
+url = "/sop/sop-subbag-umum-aparatur-dan-aset"
+weight = 4
+
+
+
+[[languages.id.menu.main]]
+identifier = 'subbag renja, monev dan keuangan'
+name = "Subbag Renja, Monev dan Keuangan"
+parent = "sop"
+url = "/sop/subbag-renja-monev-dan-keuangan"
+weight = 5
+
+
+
+[[languages.id.menu.main]]
+identifier = '2023'
+name = "2023"
+parent = "informasi keuangan"
+url = "/informasi-keuangan/informasi-keuangan-2023"
+weight = 1
+
+
+
+[[languages.id.menu.main]]
+identifier = '2024'
+name = "2024"
+parent = "informasi keuangan"
+url = "/informasi-keuangan/informasi-keuangan-2024"
+weight = 2
+
+
+
+[[languages.id.menu.main]]
+identifier = 'regulasi'
+name = "Regulasi"
+url = "/ppid/regulasi"
+weight = 8.1
+
+
+
+[[languages.id.menu.main]]
+identifier = '2023'
+name = "2023"
+parent = "kegiatan"
+url = "/2023"
+weight = 3
+
+
+
+[[languages.id.menu.main]]
+identifier = '2024'
+name = "2024"
+parent = "kegiatan"
+url = "/2024"
+weight = 4
+
+
+
+[[languages.id.menu.main]]
+identifier = 'galeri foto'
+name = "Galeri Foto"
+parent = "ppid"
+url = "/ppid/galeri"
+weight = 2
+
+
+
+
+
+
+
+
+
+[[languages.id.menu.main]]
+identifier = 'faq'
+name = "FAQ"
+url = "/faq"
+weight = 2
+
+
+
+[[languages.id.menu.main]]
+identifier = 'layanan'
+name = "Layanan"
+url = "/layanan"
+weight = 2
+
+
+
+[[languages.id.menu.main]]
+identifier = 'skm'
+name = "SKM"
+url = "/skm"
+weight = 3
+
+
+
+
+
+[[languages.id.menu.main]]
+identifier = 'visi, misi dan wewenang ppid'
+name = "Visi, Misi dan Wewenang PPID"
+parent = "ppid"
+url = "/ppid"
+weight = 10
+
+
+
+[[languages.id.menu.main]]
+identifier = '2025'
+name = "2025"
+parent = "kegiatan"
+url = "/2025"
+weight = 5
+

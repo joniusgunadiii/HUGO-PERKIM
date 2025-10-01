@@ -1,0 +1,8 @@
+---
+author: Emriliza Amarulhaq
+title: "Rapat Evaluasi Pemanfaatan Data dan Dokumen Kependudukan dengan Lembaga Pengguna Tingkat Provinsi Kalimantan Barat"
+date: 2025-06-17
+url: "/berita/rapat-evaluasi-pemanfaatan-data-dan-dokumen-kependudukan-dengan-lembaga-pengguna-tingkat-provinsi-kalimantan-barat"
+thumbnail: "/berita/thumbnails/compressed_YfpcbtZCi4Eaj2OPKCEVKlFJVDdxz2tn0Cqoz0j3.jpg"
+---
+<p><img src="/images/atZPjEjadtEzXFRT27Er.jpeg" alt="" width="1600" height="1200"><img src="/images/0UTKtr1QjXO0BhcOJ72p.jpeg" alt="" width="1200" height="1600"><img src="/images/gRX6ocGh0KtL1FuGfhqA.jpeg" alt="" width="1600" height="1200">Rapat Evaluasi Pemanfaatan Data dan Dokumen Kependudukan dengan Lembaga Pengguna Tingkat Provinsi Kalimantan Barat. Yang dilaksanakan pada hari Selasa, 17 April 2025 bertempat di Ruang Rapat Dinas Kependudukan dan Pencatatan Sipil Provinsi Kalimantan Barat.</p><p>Rapat di buka oleh Sekretaris Dinas Kependudukan dan Pencatatan Sipil Provinsi Kalimantan Barat dan dihadiri oleh para Pengguna Data dan Dokumen Kependudukan dari Organisasi Perangkat Daerah dan Badan Hukum Indonesia (BHI) di Tingkat Provinsi Kalimantan Barat.</p><p>Dalam agenda rapat tersebut dibahas yang menjadi kendala dan hambatan yang dialami oleh Pengguna Data Kependudukan dalam mengakses Data Kependudukan, serta tidak lupa pula saran dan masukan dari Pengguna Pemanfaatan Data dalam hal ini Organisasi Perangkat Daerah (OPD) dan Badan Hukum Indonesia (BHI) yang telah melakukan Perjanjian Kerja Sama (PKS) dengan Dinas Kependudukan dan Pencatatan Sipil Provinsi Kalimantan Barat.<img src="/images/Iqdj8r6fENv2okukNNQK.jpeg" alt="" width="1600" height="1200"></p>

@@ -1,0 +1,178 @@
+{{ define "main" }}
+
+<div class="container mx-auto px-4 py-8">
+  <!-- Header Section -->
+  <div class="text-center mb-12">
+    <h1 class="text-4xl font-bold text-black mb-2" aria-label="Judul Halaman SKM">SKM</h1>
+    <p class="text-4xl font-bold text-black mb-6" aria-label="Subjudul SKM">Survei Kepuasan Masyarakat</p>
+    <!-- Logo image below title -->
+    <img src="https://siindah.kalbarprov.go.id/img/siindah.png" alt="SKM Logo" class="block mx-auto w-full max-w-5xl h-32 object-contain" />
+  </div>
+
+  {{ if gt (len .Pages) 0 }}
+  <!-- All SKM Images Direct Display - No Folders -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+    {{ range .Pages.ByDate.Reverse }}
+      {{ $content := .Content }}
+      {{ $images := findRE `<img[^>]+src="([^"]+)"[^>]*>` $content }}
+      {{ $pageTitle := .Title }}
+      {{ $pageDate := .Date }}
+      
+      {{ if $images }}
+        {{ range $index, $image := $images }}
+          {{ $src := $image | replaceRE `.*src="([^"]+)".*` "$1" }}
+          {{ $alt := $image | replaceRE `.*alt="([^"]*)".*` "$1" }}
+          
+          <!-- Individual SKM Image Card -->
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group">
+            <!-- Image -->
+            <div class="relative overflow-hidden">
+              <img 
+                src="{{ $src }}" 
+                alt="{{ $alt | default $pageTitle }}" 
+                class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 cursor-pointer"
+                onclick="openSKMModal('{{ $src }}', '{{ $pageTitle }}')"
+                loading="lazy"
+              />
+              
+              <!-- Overlay on hover -->
+              <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center cursor-pointer"
+                   onclick="openSKMModal('{{ $src }}', '{{ $pageTitle }}')" aria-label="Lihat gambar ukuran penuh">
+                <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div class="bg-white dark:bg-gray-800 rounded-full p-3 shadow-lg">
+                    <svg class="w-6 h-6 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Content -->
+            <div class="p-4">
+              <!-- Date -->
+              <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">
+                📅 {{ $pageDate.Format "02 Jan 2006" }}
+              </div>
+              
+              <!-- Title with Triwulan -->
+              <h3 class="font-semibold text-amber-600 dark:text-gray-100 text-sm leading-tight cursor-pointer hover:text-emerald-600 transition-colors" 
+                  onclick="openSKMModal('{{ $src }}', '{{ $pageTitle }}')">
+                {{ $pageTitle }}
+                {{ if eq $index 0 }}
+                  - Triwulan I
+                {{ else if eq $index 1 }}
+                  - Triwulan II
+                {{ else if eq $index 2 }}
+                  - Triwulan III
+                {{ else if eq $index 3 }}
+                  - Triwulan IV
+                {{ else }}
+                  - Laporan
+                {{ end }}
+              </h3>
+            </div>
+          </div>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </div>
+  {{ else }}
+  <!-- Fallback: render content from _index.md when no child pages exist -->
+  <div class="max-w-7xl mx-auto">
+    {{ .Content | safeHTML }}
+  </div>
+  {{ end }}
+</div>
+
+<div id="skmModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-90 flex items-center justify-center p-4">
+  <div class="relative max-w-7xl max-h-full w-full h-full flex items-center justify-center">
+    <button onclick="closeSKMModal()" class="absolute top-4 right-4 text-white hover:text-gray-300 text-3xl font-bold z-10 bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center">
+      ✕
+    </button>
+    <img id="skmModalImage" src="" alt="" class="max-w-full max-h-full object-contain">
+    <p id="skmModalCaption" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-center text-lg bg-black bg-opacity-50 px-4 py-2 rounded"></p>
+  </div>
+</div>
+
+<script>
+function openSKMModal(src, alt) {
+  console.log('Opening modal with:', src, alt); // Debug log
+  const modal = document.getElementById('skmModal');
+  const modalImage = document.getElementById('skmModalImage');
+  const modalCaption = document.getElementById('skmModalCaption');
+  
+  if (modal && modalImage && modalCaption) {
+    modalImage.src = src;
+    modalImage.alt = alt || '';
+    modalCaption.textContent = alt || '';
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    console.log('Modal opened successfully'); // Debug log
+  } else {
+    console.error('Modal elements not found'); // Debug log
+  }
+}
+
+function closeSKMModal() {
+  const modal = document.getElementById('skmModal');
+  if (modal) {
+    modal.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  }
+}
+
+// Click outside modal to close
+document.addEventListener('click', function(e) {
+  const modal = document.getElementById('skmModal');
+  if (e.target === modal) {
+    closeSKMModal();
+  }
+});
+
+// Escape key to close
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeSKMModal();
+  }
+});
+</script>
+
+<style>
+.container {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.grid > div {
+  animation: slideUp 0.6s ease-in-out;
+  animation-fill-mode: both;
+}
+
+.grid > div:nth-child(1) { animation-delay: 0.1s; }
+.grid > div:nth-child(2) { animation-delay: 0.2s; }
+.grid > div:nth-child(3) { animation-delay: 0.3s; }
+.grid > div:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hover effects */
+.grid > div:hover {
+  transform: translateY(-5px);
+}
+
+img:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+</style>
+
+{{ end }}

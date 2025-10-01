@@ -1,0 +1,25 @@
+---
+author: disperkim
+title: "Keterbukaan Informasi"
+date: 1725600504
+url: /profil/keterbukaan-informasi
+---
+
+<p><a href="/file/Jm0h5muwzhbxDydZ7gpS.pdf" title="DIP DIKECUALIKAN 2024" style="display: block; text-decoration: none; background-color: #4caf50; color: white; padding: 15px; text-align: left; border-radius: 5px; width: 100%; max-width: 600px; margin: 20px auto; position: relative; font-size: 16px; font-weight: bold;"> <span style="font-size: 16px; color: #ffffff;">DIP DIKECUALIKAN 2024&nbsp;</span> <span style="position: absolute; right: 20px; font-size: 20px; color: #ffffff; border-left: 1px solid #ffffff; padding-left: 10px;">&darr;</span> </a></p>
+
+<p><a href="/file/7KBodXwmeWeVgzbBFkK6.pdf" title="SK DIP 2024" style="display: block; text-decoration: none; background-color: #4caf50; color: white; padding: 15px; text-align: left; border-radius: 5px; width: 100%; max-width: 600px; margin: 20px auto; position: relative; font-size: 16px; font-weight: bold;"> <span style="font-size: 16px; color: #ffffff;">SK DIP 2024&nbsp;</span> <span style="position: absolute; right: 20px; font-size: 20px; color: #ffffff; border-left: 1px solid #ffffff; padding-left: 10px;">&darr;</span> </a></p>
+
+<p><a href="/file/4XSm9w9ZUwBuMu96Kr0N.pdfKDIP" title="SK DIP 2023" style="display: block; text-decoration: none; background-color: #4caf50; color: white; padding: 15px; text-align: left; border-radius: 5px; width: 100%; max-width: 600px; margin: 20px auto; position: relative; font-size: 16px; font-weight: bold;"> <span style="font-size: 16px; color: #ffffff;">SK DIP 2023&nbsp;</span> <span style="position: absolute; right: 20px; font-size: 20px; color: #ffffff; border-left: 1px solid #ffffff; padding-left: 10px;">&darr;</span> </a></p>
+
+<p><a href="/file/giI2lG3fcKwPwtwUn6Wl.pdf" title="DIP DIKECUALIKAN 2023" style="display: block; text-decoration: none; background-color: #4caf50; color: white; padding: 15px; text-align: left; border-radius: 5px; width: 100%; max-width: 600px; margin: 20px auto; position: relative; font-size: 16px; font-weight: bold;"> <span style="font-size: 16px; color: #ffffff;">DIP DIKECUALIKAN 2023&nbsp;</span> <span style="position: absolute; right: 20px; font-size: 20px; color: #ffffff; border-left: 1px solid #ffffff; padding-left: 10px;">&darr;</span> </a></p>
+
+<p><a href="/file/eaEQDkbmHNsh8k3hUxXn.pdf" title="DIP SETIAP SAAT" style="display: block; text-decoration: none; background-color: #4caf50; color: white; padding: 15px; text-align: left; border-radius: 5px; width: 100%; max-width: 600px; margin: 20px auto; position: relative; font-size: 16px; font-weight: bold;"> <span style="font-size: 16px; color: #ffffff;">DIP SETIAP SAAT&nbsp;</span> <span style="position: absolute; right: 20px; font-size: 20px; color: #ffffff; border-left: 1px solid #ffffff; padding-left: 10px;">&darr;</span> </a></p>
+
+<p><a href="/file/lUFBpDAJuvOOqIPen7l4.pdf" title="DIP DISPERKIM 2024" style="display: block; text-decoration: none; background-color: #4caf50; color: white; padding: 15px; text-align: left; border-radius: 5px; width: 100%; max-width: 600px; margin: 20px auto; position: relative; font-size: 16px; font-weight: bold;"> <span style="font-size: 16px; color: #ffffff;">DIP DISPERKIM 2024&nbsp;</span> <span style="position: absolute; right: 20px; font-size: 20px; color: #ffffff; border-left: 1px solid #ffffff; padding-left: 10px;">&darr;</span> </a></p>
+
+<p><a href="/file/aXkUNrx05tTmg2XgyjxV.pdf" title="DIP SERTA MERTA 2024" style="display: block; text-decoration: none; background-color: #4caf50; color: white; padding: 15px; text-align: left; border-radius: 5px; width: 100%; max-width: 600px; margin: 20px auto; position: relative; font-size: 16px; font-weight: bold;"> <span style="font-size: 16px; color: #ffffff;">DIP SERTA MERTA 2024&nbsp;</span> <span style="position: absolute; right: 20px; font-size: 20px; color: #ffffff; border-left: 1px solid #ffffff; padding-left: 10px;">&darr;</span> </a></p>
+
+<p><a href="/file/HmLBzWsqjfEUHlGooVVf.pdf" title="DIP BERKALA 2024" style="display: block; text-decoration: none; background-color: #4caf50; color: white; padding: 15px; text-align: left; border-radius: 5px; width: 100%; max-width: 600px; margin: 20px auto; position: relative; font-size: 16px; font-weight: bold;"> <span style="font-size: 16px; color: #ffffff;">DIP BERKALA 2024&nbsp;</span> <span style="position: absolute; right: 20px; font-size: 20px; color: #ffffff; border-left: 1px solid #ffffff; padding-left: 10px;">&darr;</span> </a></p>
+
+<p><a href="/file/2CanfhQ48KHRZZO5IUvm.pdf" title="INFORMASI RENCANA UMUM PENGADAAN BARANG DAN JASA" style="display: block; text-decoration: none; background-color: #4caf50; color: white; padding: 15px; text-align: left; border-radius: 5px; width: 100%; max-width: 600px; margin: 20px auto; position: relative; font-size: 16px; font-weight: bold;"> <span style="font-size: 16px; color: #ffffff;">INFORMASI RENCANA UMUM PENGADAAN BARANG DAN JASA&nbsp;</span> <span style="position: absolute; right: 20px; font-size: 20px; color: #ffffff; border-left: 1px solid #ffffff; padding-left: 10px;">&darr;</span> </a></p>
+

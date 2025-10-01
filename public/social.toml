@@ -1,0 +1,16 @@
+[[params.homepage.social.icons]]
+website = "youtube"
+url = "https://www.youtube.com/@disperkimprovkalbar"
+
+[[params.homepage.social.icons]]
+website = "youtubeEmbed"
+url = "https://youtube.com/@disperkimprovkalbar?si=3k2uFLF5ZgycS55s"
+
+[[params.homepage.social.icons]]
+website = "instagram"
+url = "https://www.instagram.com/disperkim.kalbar/"
+
+[[params.homepage.social.icons]]
+website = "facebook"
+url = "https://web.facebook.com/dinas.barat.716"
+

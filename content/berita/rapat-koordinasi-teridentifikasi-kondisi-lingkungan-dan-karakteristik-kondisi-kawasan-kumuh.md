@@ -1,0 +1,11 @@
+---
+author: disperkim
+title: "Rapat Koordinasi Teridentifikasi Kondisi Lingkungan dan Karakteristik kondisi Kawasan Kumuh"
+date: 1696377600
+
+thumbnail: "/berita/thumbnails/compressed_8RY4V4nRYL3Okg8tGkXiNuRKQ3KAGfnuVOhp02nZ.jpg"
+url: /berita/rapat-koordinasi-teridentifikasi-kondisi-lingkungan-dan-karakteristik-kondisi-kawasan-kumuh
+---
+
+<p><span style="color: #777777; font-family: Poppins, Arial, sans-serif; font-size: 14px; background-color: #ffffff;"><img src="/images/3z2kFeXVyzQwQGfofxcW.jpg" width="1145" height="658" alt="" /></span></p>
+<p><span style="color: #777777; font-family: Poppins, Arial, sans-serif; font-size: 14px; background-color: #ffffff;">PONTIANAK &ndash; Bertempat di Aula Adiwiyata Dinas Perkim Prov Kalbar, dilaksanakan rapat koordinasi teridentifikasi kondisi lingkungan dan karakteristik kondisi Kawasan kumuh di Desa Tanjung, Kabupaten Sekadau, Rabu (4/10/2023).</span><br style="box-sizing: border-box; color: #777777; font-family: Poppins, Arial, sans-serif; font-size: 14px; background-color: #ffffff;" /><br style="box-sizing: border-box; color: #777777; font-family: Poppins, Arial, sans-serif; font-size: 14px; background-color: #ffffff;" /><span style="color: #777777; font-family: Poppins, Arial, sans-serif; font-size: 14px; background-color: #ffffff;">Rapat dilaksanakan bersama Bappeda Provinsi, Balai Prasarana Permukiman Wilayah Kalbar, dan OPD terkait dari Kabupaten Sekadau yakni, Bappeda, Dinas PUPR, Dinas Perkimtan, dan Dinas Lingkungan Hidup Kabupaten Sekadau.</span><br style="box-sizing: border-box; color: #777777; font-family: Poppins, Arial, sans-serif; font-size: 14px; background-color: #ffffff;" /><br style="box-sizing: border-box; color: #777777; font-family: Poppins, Arial, sans-serif; font-size: 14px; background-color: #ffffff;" /><span style="color: #777777; font-family: Poppins, Arial, sans-serif; font-size: 14px; background-color: #ffffff;">Dalam rapat ini, membahas terkait penyusunan rencana siteplan Kawasan kumuh di daerah Desa Tanjung yang kedepannya dapat menjadi panduan dalam penanganan dan pencegahan wilayah kumuh, acuan bagi dokumen Detail Engineering Design (DED) Pembangunan teknis dan mempermudah dalam mengetahui jumlah dan persentase kekumuhan di Desa Tanjung.</span></p>
